@@ -1,0 +1,267 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Data web</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="{% static './css/bootstrap.min.css' %}">
+      <!-- style css -->
+      <link rel="stylesheet" href="{% static './css/style.css' %}">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="{% static './css/responsive.css'%}">
+      <!-- fevicon -->
+      <link rel="icon" href="{% static './images/why1.png' %}" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href=" {% static 'css/jquery.mCustomScrollbar.min.css' %} ">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <!-- body -->
+   <body class="main-layout">
+      <!-- loader  -->
+      <div class="loader_bg">
+         <div class="loader"><img src="{% static 'images/loading.gif' %}" alt="#" /></div>
+      </div>
+      <!-- end loader -->
+      <!-- header -->
+      <header>
+         <!-- header inner -->
+         <div class="header">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+                     <div class="full">
+                        <div class="center-desk">
+                           <div class="logo">
+                              <a href="{% url 'home' %}">DigitalGuru</a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+                     <nav class="navigation navbar navbar-expand-md navbar-dark ">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarsExample04">
+                           <ul class="navbar-nav mr-auto">
+                              <li class="nav-item active">
+                                 <a class="nav-link" href="{% url 'home' %}">Home</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#about"> About  </a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#service"> Service</a>
+                              </li>
+                              <li class="nav-item">
+                                 <a class="nav-link" href="#contact">Contact</a>
+                              </li>
+                              <!-- <li class="nav-item">
+                                 <a class="nav-link" href="#">Sign Up</a>
+                              </li> -->
+                           </ul>
+                        </div>
+                     </nav>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <!-- end header inner -->
+      <!-- end header -->
+      <!-- banner -->
+      <section class="banner_main">
+         <div class="container">
+            <div class="row d_flex">
+               <div class="col-md-5">
+                  <div class="text-bg">
+                     <h1>Efficient<br> IT services</h1>
+                     <span>Technology Made Easy</span>
+                     <p>We help startups and enterprises launch and scale with digital products and effective strategies that makes them standout in the market both online and offline. </p>
+                     <a href="#">Get In Touch </a>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <div class="text-img">
+                     <figure><img src="{% static 'images/img.png' %}" /></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- end banner -->
+      <!-- Hosting -->
+      <div id="" class="hosting" >
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12" id="about">
+                  <div class="titlepage">
+                     <h2>WE DEVELOP WEBSITES AND APPS THAT DO EXACTLY WHAT YOU NEED</h2>
+                  </div>
+               </div>
+            </div>
+            <div class="row" >
+               <div class="col-md-12">
+                  <div class="web_hosting">
+                     <h4> We specialize in custom web development services, <br>
+                     which means that your solution will be tailored to perfectly fit your business.</h4>
+                     <label>
+                        <ul style="list-style-type: square;">
+                           <li>Our custom websites and apps are created to cater to your unique business needs.</li>
+                           <li>We develop solutions that will grow and evolve together with our clients’ businesses.</li>
+
+
+
+                        </ul>
+                     </label>
+                     <figure><img  src="{% static 'images/web.jpg' %}" alt="#"/></figure>
+                     
+                     
+                     <!-- <a href="#">Read more</a> -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end Hosting -->
+      <!-- Services  -->
+      <div id="service" class="Services">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2>Best Services</h2>
+                     <p> we offer services such as; <br>
+                        
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+
+            {% for service in services %}
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                  <div class="Services-box">
+                     <i><img src="{{service.service_img.url }}" alt="#" /></i>
+                     <h3> {{service.service_name}}</h3>
+                     <p>{{service.service_desc}}</p>
+                  </div>
+               </div>
+            {% endfor %}
+               {% comment %} <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                  <div class="Services-box">
+                     <i><img src="images/service2.png" alt="#" /></i>
+                     <h3>web development</h3>
+                     <p>do you wanna make your website dynamic?<br>
+                     digitalguru is the best option for you
+                     </p>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                  <div class="Services-box">
+                     <i><img src="images/service3.png" alt="#" /></i>
+                     <h3>Android/Ios development</h3>
+                     <p>we design and develop any kind of ios or android application</p>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12">
+                  <div class="Services-box">
+                     <i><img src="images/service4.png" alt="#" /></i>
+                     <h3>Desktop application dev</h3>
+                     <!-- <p>Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci.</p> -->
+                  </div> {% endcomment %}
+               </div>
+
+      </div>
+      <!-- end why -->
+      <!-- contact -->
+      <div id="contact-form" class="contact">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-6 offset-md-3 ">
+                  <form class="main_form">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <input class="contactus" placeholder="Name" type="text" name="Name">
+                        </div>
+                        <div class="col-sm-12">
+                           <input class="contactus" placeholder="Email" type="text" name=" Email">
+                        </div>
+                        <div class="col-sm-12">
+                           <input class="contactus" placeholder="Phone" type="text" name="Phone">
+                        </div>
+                        <div class="col-sm-12">
+                           <textarea class="textarea" placeholder="Message"  name="Message"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                           <button class="send" type="submit">Send</button>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- end contact -->
+      <!--  footer -->
+      <footer>
+         <div class="footer">
+            <div class="container">
+               <div class="row">
+                  <div class="col-md-10 offset-md-1">
+                     <div class="cont">
+                        <h3>Contact now @DigitalGuru</h3>
+                        <span>Leaving good in a new technological environment</span>
+                        <p>
+                           the time is now from the analog age to the digital<br>
+                           Day by Day new IT technlogies evolves, old one decline but the<br> successful ones are those who knows how to use new technology
+
+                        </p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-md-12">
+                        <p>© 2019 All Rights Reserved. veeceetechnologies
+
+                        </a></p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+    
+      </footer>
+      <!-- end footer -->
+      <!-- Javascript files-->
+      <script src="{% static 'js/jquery.min.js' %} "></script>
+      <script src="{% static 'js/popper.min.js' %}"></script>
+      <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+      <script src="{% static 'js/jquery-3.0.0.min.js' %}"></script>
+      <script src="{% static 'js/plugin.js' %}"></script>
+      <!-- sidebar -->
+      <script src="{% static 'js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+      <script src="{% static 'js/custom.js' %}"></script>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   </body>
+</html>
+
